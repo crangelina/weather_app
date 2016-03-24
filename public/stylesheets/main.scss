@@ -2,6 +2,7 @@ $grey: #ecf0f1;
 $darkgrey: #bdc3c7;
 
 body {
+  background-color: $darkgrey;
   &.clear {
     background-color: #e3b219;
   }
