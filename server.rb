@@ -12,7 +12,6 @@ get '/' do
 end
 
 post '/search' do 
-  pp params
   @zip = params[:zip]
   # api query with restclient
   resp = RestClient.get("http://api.openweathermap.org/data/2.5/weather?zip=#{@zip},us&appid=#{API_KEY}&units=imperial")
