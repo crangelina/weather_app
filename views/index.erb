@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/output.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Sacramento|Lato:400,700' rel='stylesheet' type='text/css'>
+  <title>Weather App</title>
+</head>
+
+<body class="<%= @weather_class %>">
+  <div class="container">
+
+    <form action="/search" method="POST">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-xs-12 form-group form-group-lg">
+          <input type="text" name="zip" class="form-control" placeholder="Zip Code" />
+        </div>
+        </div>
+        </div>
+      </div>
+    </form>
+    <% if @zip %>
+    <div class="row">
+      <div class="col-sm-12 form-group result text-center">
+          <img src="images/<%= @weather_class %>.png">
+          <h2><%= @weather %>&deg; F </h2>
+          <div> <small><%= @zip %></small></div>
+      </div>
+    </div>
+    <% end %>
+
+  </div> <!-- /containter -->
+
+</body>
+</html>

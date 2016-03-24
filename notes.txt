@@ -1,0 +1,9 @@
+Notes:
+
+one page app with form
+just text field and button
+sends up location
+
+search weather api
+
+render results
