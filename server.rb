@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'rest-client'
 require 'json'
-require 'pp'
+
 
 
 
@@ -19,10 +19,6 @@ post '/search' do
   # pass results into json
   data = JSON.parse(resp)
   # set instance var
-  p "-" * 30 + "\n"
-  pp data
-  p "-" * 30 + "\n"
-
   @weather = data["main"]["temp"]
   @weather_class = data["weather"][0]["main"].downcase
   @id = data["weather"][0]["main"]
