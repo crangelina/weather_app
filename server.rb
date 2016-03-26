@@ -20,6 +20,11 @@ post '/search' do
   # set instance var
   @weather = data["main"]["temp"]
   @weather_class = data["weather"][0]["main"].downcase
-  @id = data["weather"][0]["main"]
-  erb :index
+
+  {
+    weather: @weather, 
+    weather_class: @weather_class
+  }.to_json
+  
+
 end

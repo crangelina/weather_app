@@ -17,19 +17,39 @@ body {
   &.haze {
     background-color: #c1d4d8;
   }
-  margin-top: 30px;
-  .result {
-    font-size: 18px;
-    color: #fff;
-    min-height: 400px;
-    border-radius: 10px;
-    text-align: center;
-    h2 {
-      font-family: 'Lato', sans-serif;
-    }
-    img {
-      height: 300px;
-      margin: 30px 0;
+
+  .result-wrapper{
+    display: none;
+    .result {
+      font-size: 18px;
+      color: #fff;
+      min-height: 400px;
+      border-radius: 10px;
+      text-align: center;
+      h2 {
+        font-family: 'Lato', sans-serif;
+      }
+      img {
+        height: 300px;
+        margin: 30px 0;
+      }
     }
   }
+
+.input-wrapper {
+  margin-top: 30px;
+  transition: margin .75s ease-out;
+  &.first-time {
+    margin-top: 250px;
+  }
+}
+
+input {
+  font-size: 28px !important;
+  height: auto !important;
+  opacity: 0.7;
+  border: 0 !important;
+  box-shadow: 0 -1px 0 rgba(0,0,0, 0.45) !important;
+}
+
 }

@@ -12,26 +12,26 @@
 
 <body class="<%= @weather_class %>">
   <div class="container">
-    <form action="/search" method="POST">
-      <div class="row">
+
+      <div class="row input-wrapper first-time">
         <div class="col-sm-6 col-sm-offset-3 col-xs-12 form-group form-group-lg">
-          <input type="text" name="zip" class="form-control" placeholder="Zip Code" />
+          <input type="text" name="zip" class="zip form-control" placeholder="Zip Code" autocomplete="off" />
         </div>
         </div>
         </div>
       </div>
-    </form>
-    <% if @zip %>
-    <div class="row">
-      <div class="col-sm-12 form-group result text-center">
-          <img src="images/<%= @weather_class %>.png">
-          <h2><%= @weather %>&deg; F </h2>
-          <div> <small><%= @zip %></small></div>
+
+
+    <div class="row result-wrapper">
+      <div class="result col-sm-12 form-group text-center">
+          <img>
+          <h2></h2>
       </div>
     </div>
-    <% end %>
+
 
   </div> <!-- /containter -->
-
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/main.js"></script>
 </body>
 </html>
